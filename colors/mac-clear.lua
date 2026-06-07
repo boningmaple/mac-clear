@@ -1,0 +1,1 @@
+require("mac-clear").load()

@@ -1,0 +1,31 @@
+---@alias Theme "light" | "dark"
+
+---@class Config
+---@field theme? Theme
+---@field colors_overrides? fun(theme: Theme): table?
+---@field groups_overrides? fun(theme: Theme, colors: Colors): table?
+
+---@class Colors
+---@field black string
+---@field white string
+---@field red string
+---@field green string
+---@field yellow string
+---@field blue string
+---@field magenta string
+---@field cyan string
+---@field red_bright string
+---@field green_bright string
+---@field yellow_bright string
+---@field blue_bright string
+---@field magenta_bright string
+---@field cyan_bright string
+---@field selection string
+---@field peach string
+---@field golden_yellow string
+---@field surface string
+---@field on_surface string
+---@field on_surface_low string
+---@field on_surface_lowest string
+---@field surface_container string
+---@field surface_container_low string
