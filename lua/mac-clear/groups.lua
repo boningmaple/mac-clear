@@ -192,7 +192,7 @@ function M.getGroups(theme, colors)
         ["@variable.builtin"]            = { link = "Keyword" },
         -- ["@variable.parameter"]
         -- ["@variable.parameter.builtin"]
-        ["@variable.member"]             = { link = "@variable" },
+        ["@variable.member"]             = {},
 
         -- ["@constant"]
         -- ["@constant.builtin"]
