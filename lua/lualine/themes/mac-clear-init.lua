@@ -15,34 +15,44 @@ function M.load(theme)
         config.colors_overrides(theme) or {}
     )
 
+    local b = { bg = colors.surface_container_low, fg = colors.on_surface }
     local c = { bg = colors.surface_container_low, fg = colors.on_surface }
+    local inactive_c = { bg = colors.surface_container_low, fg = colors.on_surface_lowest }
     return {
         normal = {
             a = { bg = colors.blue, fg = colors.surface, gui = "bold" },
+            b = b,
             c = c,
         },
         insert = {
             a = { bg = colors.green, fg = colors.surface, gui = "bold" },
+            b = b,
             c = c,
         },
         visual = {
             a = { bg = colors.magenta, fg = colors.surface, gui = "bold" },
+            b = b,
             c = c,
         },
         replace = {
             a = { bg = colors.red, fg = colors.surface, gui = "bold" },
+            b = b,
             c = c,
         },
         command = {
             a = { bg = colors.yellow, fg = colors.surface, gui = "bold" },
+            b = b,
             c = c,
         },
         terminal = {
             a = { bg = colors.yellow, fg = colors.surface, gui = "bold" },
+            b = b,
             c = c,
         },
         inactive = {
-            c = { bg = colors.surface_container_low, fg = colors.on_surface_lowest },
+            a = inactive_c,
+            b = inactive_c,
+            c = inactive_c,
         },
     }
 end
