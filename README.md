@@ -51,9 +51,11 @@ override colors or highlight groups.
 Call `setup()` before running `vim.cmd.colorscheme("mac-clear")` if you want
 to customize it.
 
+> [!NOTE]
+>
 > Check [lua/mac-clear/colors.lua](lua/mac-clear/colors.lua) for available
-> colors and [lua/mac-clear/groups.lua](lua/mac-clear/groups.lua) for more
-> highlight group examples.
+> colors, [lua/mac-clear/groups.lua](lua/mac-clear/groups.lua) for more
+> highlight group examples and [lua/lualine/themes/mac-clear-init.lua](lua/lualine/themes/mac-clear-init.lua) for lualine.
 
 ```lua
 require("mac-clear").setup({
@@ -72,7 +74,7 @@ require("mac-clear").setup({
 
     groups_overrides = function(theme, colors)
         return {
-            -- Use raw colors directly.
+            -- Use colors directly.
             Normal = { bg = "#000000", fg = "#ffffff" },
 
             -- Or use the colors.
@@ -82,7 +84,31 @@ require("mac-clear").setup({
             Function = { fg = theme == "light" and colors.blue or colors.red },
 
             -- Or use your new color
-            Identifier = { fg = colors.new_color }
+            Identifier = { fg = colors.new_color },
+        }
+    end,
+
+    lualine_overrides = function(theme, colors)
+        return {
+            -- Use colors directly.
+            normal = {
+                a = { bg = "#000000", fg = "#ffffff", gui = "bold" },
+            },
+
+            -- Or use the colors.
+            insert = {
+                a = { bg = colors.black, fg = colors.white, gui = "bold" },
+            },
+
+            -- Or use different colors for light and dark.
+            visual = {
+                a = { bg = theme == "light" and colors.blue or colors.red, fg = colors.white, gui = "bold" },
+            },
+
+            -- Or use your new color
+            terminal = {
+                a = { bg = colors.new_color, fg = colors.white, gui = "bold" },
+            },
         }
     end,
 })

@@ -4,6 +4,7 @@
 ---@field theme? Theme
 ---@field colors_overrides? fun(theme: Theme): table?
 ---@field groups_overrides? fun(theme: Theme, colors: Colors): table?
+---@field lualine_overrides? fun(theme: Theme, colors: Colors): table?
 
 ---@class Colors
 ---@field black string

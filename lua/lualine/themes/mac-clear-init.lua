@@ -18,7 +18,8 @@ function M.load(theme)
     local b = { bg = colors.surface_container_low, fg = colors.on_surface }
     local c = { bg = colors.surface_container_low, fg = colors.on_surface }
     local inactive_c = { bg = colors.surface_container_low, fg = colors.on_surface_lowest }
-    return {
+
+    local lualine_theme = {
         normal = {
             a = { bg = colors.blue, fg = colors.surface, gui = "bold" },
             b = b,
@@ -55,6 +56,12 @@ function M.load(theme)
             c = inactive_c,
         },
     }
+
+    return vim.tbl_deep_extend(
+        "force",
+        lualine_theme,
+        config.lualine_overrides(theme, colors) or {}
+    )
 end
 
 return M

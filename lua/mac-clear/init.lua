@@ -6,7 +6,8 @@ local M = {}
 ---@type Config
 M.config = {
     colors_overrides = function() end,
-    groups_overrides = function() end
+    groups_overrides = function() end,
+    lualine_overrides = function() end,
 }
 
 ---@param config? Config
