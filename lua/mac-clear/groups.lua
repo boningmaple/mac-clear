@@ -396,6 +396,11 @@ function M.getGroups(theme, colors)
 
         -- nvim-treesitter-context, use the default
         -- Check `:h nvim-treesitter-context-highlights`
+
+        -- lualine.nvim
+        LuaLineDiffAdd                   = { link = "Added" },
+        LuaLineDiffDelete                = { link = "Removed" },
+        LuaLineDiffChange                = { link = "Changed" },
     }
 end
 
