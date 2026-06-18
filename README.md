@@ -54,7 +54,7 @@ to customize it.
 > [!NOTE]
 >
 > Check [lua/mac-clear/colors.lua](lua/mac-clear/colors.lua) for available
-> colors, [lua/mac-clear/groups.lua](lua/mac-clear/groups.lua) for more
+> colors, [lua/mac-clear/groups](lua/mac-clear/groups) for more
 > highlight group examples and [lua/lualine/themes/mac-clear-init.lua](lua/lualine/themes/mac-clear-init.lua) for lualine.
 
 ```lua
@@ -115,4 +115,3 @@ require("mac-clear").setup({
 
 vim.cmd.colorscheme("mac-clear")
 ```
-
