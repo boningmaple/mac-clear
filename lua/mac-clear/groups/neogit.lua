@@ -30,8 +30,8 @@ function M.getGroups(theme, colors)
 
         NeogitHunkHeader           = { bg = colors.on_surface_low, fg = colors.surface },
         NeogitDiffContext          = { bg = colors.surface_container_low },
-        NeogitDiffAdd              = { link = "DiffAdd" },
-        NeogitDiffDelete           = { link = "DiffDelete" },
+        NeogitDiffAdd              = { bg = colors.green_bg, fg = colors.green },
+        NeogitDiffDelete           = { bg = colors.red_bg, fg = colors.red },
         NeogitDiffHeader           = { bg = colors.surface_container_low, fg = colors.magenta },
         NeogitActiveItem           = { link = "Visual" },
 
@@ -47,7 +47,7 @@ function M.getGroups(theme, colors)
         NeogitDiffHeaderCursor     = { link = "NeogitDiffHeaderHighlight" },
 
         NeogitDiffAddInline        = { link = "DiffTextAdd" },
-        NeogitDiffDeleteInline     = { link = "DiffTextAdd" },
+        NeogitDiffDeleteInline     = { bg = colors.red, fg = colors.surface },
 
         NeogitFilePath             = { fg = colors.magenta, italic = true },
         NeogitCommitViewHeader     = { link = "NeogitHunkHeader" },

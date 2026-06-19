@@ -23,6 +23,15 @@ function M.getColors(theme)
         magenta_bright = utils.lightDark(theme, "#d389e5", "#d389e5"),
         cyan_bright = utils.lightDark(theme, "#77e1e5", "#84dde0"),
 
+        -- Light: 10% color + 90% #ffffff
+        -- Dark: 16% color + 84% #212734
+        red_bg = utils.lightDark(theme, "#f8eeed", "#392f37"),
+        green_bg = utils.lightDark(theme, "#f0f7f1", "#2d3c3e"),
+        yellow_bg = utils.lightDark(theme, "#f9f7ef", "#3b3c3b"),
+        blue_bg = utils.lightDark(theme, "#eef3f6", "#2d3948"),
+        magenta_bg = utils.lightDark(theme, "#f7f0f9", "#3a344c"),
+        cyan_bg = utils.lightDark(theme, "#f0f9fa", "#30414c"),
+
         selection = utils.lightDark(theme, "#dfe8ee", "#273d4c"),
 
         peach = utils.lightDark(theme, "#f2a57e", "#f2a57e"),

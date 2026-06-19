@@ -7,7 +7,9 @@ local M = {}
 ---@param colors Colors
 function M.getGroups(theme, colors)
     return {
-        -- Default highlight groups
+        -- Check `h E28`
+
+        -- Basic editor
         -- Check `:h highlight-default`
         NonText                          = { fg = colors.on_surface_lowest },
         Normal                           = { bg = colors.surface, fg = colors.on_surface },
@@ -24,11 +26,11 @@ function M.getGroups(theme, colors)
         CursorColumn                     = { bg = colors.surface_container },
         CursorLine                       = { link = "CursorColumn" },
         Directory                        = { fg = colors.blue },
-        DiffAdd                          = { bg = colors.green, fg = colors.surface },
-        DiffChange                       = { bg = colors.yellow, fg = colors.surface },
-        DiffDelete                       = { bg = colors.red, fg = colors.surface },
-        DiffText                         = { bg = colors.blue, fg = colors.surface },
-        -- DiffTextAdd
+        DiffAdd                          = { bg = colors.green_bg },
+        DiffChange                       = { bg = colors.yellow_bg },
+        DiffDelete                       = { bg = colors.red_bg },
+        DiffText                         = { bg = colors.yellow, fg = colors.surface },
+        DiffTextAdd                      = { bg = colors.green, fg = colors.surface },
         -- EndOfBuffer
         -- TermCursor
         OkMsg                            = { fg = colors.green },
@@ -99,7 +101,7 @@ function M.getGroups(theme, colors)
         WinBar                           = { link = "StatusLine" },
         WinBarNC                         = { link = "StatusLineNC" },
 
-        -- Common syntax highlight groups
+        -- Standard syntax
         -- Check `:h group-name`
         Comment                          = { fg = colors.on_surface_low },
         Special                          = { fg = colors.peach },
@@ -305,7 +307,7 @@ function M.getGroups(theme, colors)
 
         -- ["@spell"]
 
-        -- Lsp semantic highlights
+        -- Lsp semantic highlight groups
         -- Check `:h lsp-semantic-highlight`
         -- ["@lsp.type.class"]
         -- ["@lsp.type.comment"]
@@ -341,6 +343,17 @@ function M.getGroups(theme, colors)
         -- ["@lsp.mod.modification"]
         -- ["@lsp.mod.readonly"]
         -- ["@lsp.mod.static"]
+
+        -- Lsp highlight of symbols and references
+        -- Check `:h lsp-highlight`
+        -- LspReferenceText
+        -- LspReferenceRead
+        -- LspReferenceWrite
+        -- LspReferenceTarget
+        -- LspInlayHint
+        -- LspCodeLens
+        -- LspCodeLensSeparator
+        -- LspSignatureActiveParameter
 
         -- Lsp zig
         ["@lsp.type.escapeSequence.zig"] = { link = "@string.escape" },

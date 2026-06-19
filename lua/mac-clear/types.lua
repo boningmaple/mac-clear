@@ -21,6 +21,12 @@
 ---@field blue_bright string
 ---@field magenta_bright string
 ---@field cyan_bright string
+---@field red_bg string
+---@field green_bg string
+---@field yellow_bg string
+---@field blue_bg string
+---@field magenta_bg string
+---@field cyan_bg string
 ---@field selection string
 ---@field peach string
 ---@field golden_yellow string
