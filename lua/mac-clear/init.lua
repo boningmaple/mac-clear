@@ -1,6 +1,3 @@
-local getColors = require("mac-clear.colors").getColors
-local getGroups = require("mac-clear.groups").getGroups
-
 local M = {}
 
 ---@type Config
@@ -28,12 +25,12 @@ function M.load(config)
 
     local colors = vim.tbl_deep_extend(
         "force",
-        getColors(theme),
+        require("mac-clear.colors").getColors(theme),
         config.colors_overrides(theme) or {}
     )
     local groups = vim.tbl_deep_extend(
         "force",
-        getGroups(theme, colors),
+        require("mac-clear.groups").getGroups(theme, colors),
         config.groups_overrides(theme, colors) or {}
     )
     for group, spec in pairs(groups) do
