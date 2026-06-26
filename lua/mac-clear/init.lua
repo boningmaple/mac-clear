@@ -23,12 +23,12 @@ function M.load(config)
 
     vim.g.colors_name = config.theme and ("mac-clear-" .. theme) or "mac-clear"
 
-    local colors = vim.tbl_deep_extend(
+    local colors = vim.tbl_extend(
         "force",
         require("mac-clear.colors").getColors(theme),
         config.colors_overrides(theme) or {}
     )
-    local groups = vim.tbl_deep_extend(
+    local groups = vim.tbl_extend(
         "force",
         require("mac-clear.groups").getGroups(theme, colors),
         config.groups_overrides(theme, colors) or {}

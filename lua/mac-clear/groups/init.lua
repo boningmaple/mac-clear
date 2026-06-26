@@ -6,7 +6,7 @@ function M.getGroups(theme, colors)
     -- Rules:
     -- 1. Keep Neovim groups first
     -- 2. Third party plugins can only link to Neovim or their own groups
-    return vim.tbl_deep_extend(
+    return vim.tbl_extend(
         "error",
         require("mac-clear.groups.neovim").getGroups(theme, colors),
         require("mac-clear.groups.blink-cmp").getGroups(theme, colors),
